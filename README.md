@@ -11,14 +11,14 @@ Place `Cookie2Header.js` in `~/Library/Containers/com.luckymarmot.Paw/Data/Libra
 ## Using
 First, create a "login" request which hits your login URL with a valid username and password, and run the request to store the cookies from the response:
 
-![Create a login request](http://i.imgur.com/ISRNksX.png)
+![Create a login request](https://raw.githubusercontent.com/briangordon/paw-angular-csrf/screenshots/screenshot-0.png)
 
 Next, create a request for the CRSF-protected API. On the Headers tab, input the correct header name. In the header value box, right click and select the Cookie2Header dynamic value from the Extensions submenu:
 
-![Select the Cookie2Header dynamic value](http://i.imgur.com/a2g4Jpk.png)
+![Select the Cookie2Header dynamic value](https://raw.githubusercontent.com/briangordon/paw-angular-csrf/screenshots/screenshot-1.png)
 
 Finally, select your login Request and enter the name of the cookie which contains the CSRF nonce:
 
-![Fill out the form](http://i.imgur.com/LvrdT1r.png)
+![Fill out the form](https://raw.githubusercontent.com/briangordon/paw-angular-csrf/screenshots/screenshot-2.png)
 
 Your nonce should appear in the box. It will now be included in the header of requests to the protected API. If your nonce expires, re-run the login request to automatically refresh the nonce. 
