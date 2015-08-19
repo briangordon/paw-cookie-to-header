@@ -1,4 +1,4 @@
-var AngularCSRF = function () {
+var Cookie2Header = function () {
     // A class with Object.prototype.toString overridden seems to be the only way to get Paw to display an error message cleanly.
     function Exception(message) {
         this.toString = function () { return message; }
@@ -29,11 +29,11 @@ var AngularCSRF = function () {
     this.text = this.evaluate;
 }
 
-AngularCSRF.identifier = "name.brian-gordon.PawExtensions.AngularCSRF";
-AngularCSRF.title = "Angular CSRF";
-AngularCSRF.inputs = [
+Cookie2Header.identifier = "name.brian-gordon.PawExtensions.Cookie2Header";
+Cookie2Header.title = "Cookie2Header";
+Cookie2Header.inputs = [
     DynamicValueInput("loginRequest", "\"login\" request that returns the CSRF cookie:", "Request"),
     DynamicValueInput("crsfCookieName", "Name of the CSRF cookie:", "String"),
 ];
 
-registerDynamicValueClass(AngularCSRF);
+registerDynamicValueClass(Cookie2Header);
