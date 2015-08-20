@@ -15,10 +15,10 @@ First, create a "login" request which hits your login URL with a valid username 
 
 Next, create a request for the CRSF-protected API. On the Headers tab, input the correct header name. In the header value box, right click and select the Cookie2Header dynamic value from the Extensions submenu:
 
-![Select the Cookie2Header dynamic value](https://raw.githubusercontent.com/briangordon/paw-angular-csrf/screenshots/screenshot-1.png)
+![Select the Cookie2Header dynamic value](https://raw.githubusercontent.com/briangordon/paw-angular-csrf/screenshots/screenshot-2.png)
 
 Finally, select your login Request and enter the name of the cookie which contains the CSRF nonce:
 
-![Fill out the form](https://raw.githubusercontent.com/briangordon/paw-angular-csrf/screenshots/screenshot-2.png)
+![Fill out the form](https://raw.githubusercontent.com/briangordon/paw-angular-csrf/screenshots/screenshot-1.png)
 
 Your nonce should appear in the box. It will now be included in the header of requests to the protected API. If your nonce expires, re-run the login request to automatically refresh the nonce. 
